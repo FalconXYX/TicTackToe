@@ -28,7 +28,7 @@ clicked6 = False
 clicked7 = False
 clicked8 = False
 clicked9 = False
-print(square3)
+
 class App(tk.Tk):
     def __init__(self):
         global player
@@ -103,6 +103,15 @@ class App(tk.Tk):
         global square8
         global square9
         global turn
+        global clicked1
+        global clicked2
+        global clicked3
+        global clicked4
+        global clicked5
+        global clicked6
+        global clicked7
+        global clicked8
+        global clicked9
         print(turn)
         row1 = square1 + square2 + square3
         row2 = square4 + square5 + square6
@@ -115,9 +124,27 @@ class App(tk.Tk):
         if row1 == 3 or row2 == 3 or row3 == 3 or c1 == 3 or c2 == 3 or c3 == 3 or d1 == 3 or d2 == 3:
             win.configure(text="Player 1 Wins")
             win.place(x=260, y=60)
+            clicked1 = True
+            clicked2 = True
+            clicked3 = True
+            clicked4 = True
+            clicked5 = True
+            clicked6 = True
+            clicked7 = True
+            clicked8 = True
+            clicked9 = True
         if row1 == 15 or row2 == 15 or row3 == 15 or c1 == 15 or c2 == 15 or c3 == 15 or d1 == 15 or d2 == 15:
             win.configure(text="Player 2 Wins")
             win.place(x=260, y=60)
+            clicked1 = True
+            clicked2 = True
+            clicked3 = True
+            clicked4 = True
+            clicked5 = True
+            clicked6 = True
+            clicked7 = True
+            clicked8 = True
+            clicked9 = True
         else:
             turn += 1
         if turn == 9:
@@ -131,142 +158,145 @@ class App(tk.Tk):
         global place1
         global square1
         global clicked1
-
-        if player == 1:
-            place1.configure(text="X")
-            square1 = 1
-            player = 2
-        elif player == 2:
-            place1.configure(text="O")
-            square1 = 5
-            player = 1
-
-        self.endgame()
+        if clicked1 == False:
+            if player == 1:
+                place1.configure(text="X")
+                square1 = 1
+                player = 2
+            elif player == 2:
+                place1.configure(text="O")
+                square1 = 5
+                player = 1
+            clicked1 = True
+            self.endgame()
     def game2(self):
         global player
         global square2
         global place2
         global clicked2
-
-        if player == 1:
-            place2.configure(text="X")
-            square2 = 1
-            player = 2
-        elif player == 2:
-            place2.configure(text="O")
-            square2 = 5
-            player = 1
-        self.endgame()
+        if clicked2 == False:
+            if player == 1:
+                place2.configure(text="X")
+                square2 = 1
+                player = 2
+            elif player == 2:
+                place2.configure(text="O")
+                square2 = 5
+                player = 1
+            clicked2 = True
+            self.endgame()
     def game3(self):
         global player
         global square3
         global place3
         global clicked3
-        if player == 1:
-            place3.configure(text="X")
-            square3 = 1
-            player = 2
-        elif player == 2:
-            place3.configure(text="O")
-            square3 = 5
-            player = 1
-        self.endgame()
+        if clicked3 == False:
+            if player == 1:
+                place3.configure(text="X")
+                square3 = 1
+                player = 2
+            elif player == 2:
+                place3.configure(text="O")
+                square3 = 5
+                player = 1
+            clicked3 = True
+            self.endgame()
     def game4(self):
         global player
         global place4
         global square4
         global clicked4
-
-        if player == 1:
-            place4.configure(text="X")
-            square4 = 1
-            player = 2
-        elif player == 2:
-            place4.configure(text="O")
-            square4 = 5
-            player = 1
-        self.endgame()
+        if clicked4 == False:
+            if player == 1:
+                place4.configure(text="X")
+                square4 = 1
+                player = 2
+            elif player == 2:
+                place4.configure(text="O")
+                square4 = 5
+                player = 1
+            clicked4 = True
+            self.endgame()
     def game5(self):
         global place5
         global player
         global square5
         global clicked5
-
-        if player == 1:
-            place5.configure(text="X")
-            square5 = 1
-            player = 2
-        elif player == 2:
-            place5.configure(text="O")
-            square5 = 5
-            player = 1
-        self.endgame()
+        if clicked5 == False:
+            if player == 1:
+                place5.configure(text="X")
+                square5 = 1
+                player = 2
+            elif player == 2:
+                place5.configure(text="O")
+                square5 = 5
+                player = 1
+            clicked5 = True
+            self.endgame()
     def game6(self):
         global player
         global place6
         global square6
         global clicked6
-
-        if player == 1:
-            place6.configure(text="X")
-            square6 = 1
-            player = 2
-        elif player == 2:
-            place6.configure(text="O")
-            square6 = 5
-            player = 1
-        self.endgame()
+        if clicked6 == False:
+            if player == 1:
+                place6.configure(text="X")
+                square6 = 1
+                player = 2
+            elif player == 2:
+                place6.configure(text="O")
+                square6 = 5
+                player = 1
+            clicked6 = True
+            self.endgame()
     def game7(self):
         global player
         global place7
         global square7
         global clicked7
-
-        if player == 1:
-            place7.configure(text="X")
-            square7 = 1
-            player = 2
-        elif player == 2:
-            place7.configure(text="O")
-            square7 = 5
-            player = 1
-        self.endgame()
+        if clicked7 == False:
+            if player == 1:
+                place7.configure(text="X")
+                square7 = 1
+                player = 2
+            elif player == 2:
+                place7.configure(text="O")
+                square7 = 5
+                player = 1
+            clicked7 = True
+            self.endgame()
     def game8(self):
         global player
         global place8
         global square8
         global clicked8
-
-        if player == 1:
-            place8.configure(text="X")
-            square8 = 1
-            player = 2
-        elif player == 2:
-            place8.configure(text="O")
-            square8 = 5
-            player = 1
-        self.endgame()
+        if clicked8 == False:
+            if player == 1:
+                place8.configure(text="X")
+                square8 = 1
+                player = 2
+            elif player == 2:
+                place8.configure(text="O")
+                square8 = 5
+                player = 1
+            clicked8 = True
+            self.endgame()
     def game9(self):
         global player
         global place9
         global square9
         global clicked9
-        if player == 1:
-            place9.configure(text="X")
-            square9 = 1
-            player = 2
-        elif player == 2:
-            place9.configure(text="O")
-            square9 = 5
-            player = 1
-        self.endgame()
-
-
-
-
-
-
-
+        if clicked9 == False:
+            if player == 1:
+                place9.configure(text="X")
+                square9 = 1
+                player = 2
+            elif player == 2:
+                place9.configure(text="O")
+                square9 = 5
+                player = 1
+            clicked9 = True
+            self.endgame()
 
 
 
